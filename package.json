@@ -1,0 +1,228 @@
+{
+  "name": "formats",
+  "displayName": "Format:CSS/LESS/SCSS",
+  "publisher": "chencaize",
+  "author": {
+    "name": "chencaize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chencaize/format-style"
+  },
+  "bugs": {
+    "url": "https://github.com/chencaize/format-style/issues"
+  },
+  "homepage": "https://chencaize.top",
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#333",
+    "theme": "dark"
+  },
+  "description": "use js-beautify to format style files(css/less/scss)",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "keywords": [
+    "formats",
+    "format",
+    "formatter",
+    "css",
+    "less",
+    "scss",
+    "sass",
+    "style",
+    "ccz"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.formate",
+    "onLanguage:css",
+    "onLanguage:less",
+    "onLanguage:scss",
+    "onLanguage:sass"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "type": "object",
+    "configuration": {
+      "title": "",
+      "properties": {
+        "formatStyle.enable": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true
+        },
+        "formatStyle.indent_size": {
+          "scope": "resource",
+          "type": "number",
+          "default": 4
+        },
+        "formatStyle.indent_char": {
+          "scope": "resource",
+          "type": "string",
+          "default": " "
+        },
+        "formatStyle.eol": {
+          "scope": "resource",
+          "type": "string",
+          "default": "auto"
+        },
+        "formatStyle.indent_level": {
+          "scope": "resource",
+          "type": "number",
+          "default": 0
+        },
+        "formatStyle.indent_with_tabs": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.preserve_newlines": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true
+        },
+        "formatStyle.max_preserve_newlines": {
+          "scope": "resource",
+          "type": "number",
+          "default": 32786
+        },
+        "formatStyle.space_in_paren": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.space_in_empty_paren": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.jslint_happy": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.space_after_anon_function": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.space_after_named_function": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.brace_style": {
+          "scope": "resource",
+          "type": "string",
+          "default": "brace_style"
+        },
+        "formatStyle.unindent_chained_methods": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.break_chained_methods": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.keep_array_indentation": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.unescape_strings": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.wrap_line_length": {
+          "scope": "resource",
+          "type": "number",
+          "default": 0
+        },
+        "formatStyle.wrap_attributes": {
+          "scope": "resource",
+          "type": "array",
+          "default": [
+            "auto",
+            "force",
+            "force-aligned",
+            "force-expand-multiline",
+            "aligned-multiple",
+            "preserve",
+            "preserve-aligned"
+          ]
+        },
+        "formatStyle.e4x": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.end_with_newline": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.comma_first": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.operator_position": {
+          "scope": "resource",
+          "type": "array",
+          "default": [
+            "before-newline",
+            "after-newline",
+            "preserve-newline"
+          ]
+        },
+        "formatStyle.indent_empty_lines": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false
+        },
+        "formatStyle.templating": {
+          "scope": "resource",
+          "type": "array",
+          "default": [
+            "auto"
+          ]
+        },
+        "formatStyle.selector_separator_newline": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true
+        },
+        "formatStyle.newline_between_rules": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true
+        },
+        "formatStyle.space_around_combinator": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  },
+  "scripts": {},
+  "license": "MIT",
+  "dependencies": {
+    "@types/js-beautify": "^1.8.2",
+    "js-beautify": "1.10.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.37",
+    "tslint": "^5.20.1",
+    "typescript": "^3.8.3",
+    "vscode": "^1.1.36"
+  }
+}
